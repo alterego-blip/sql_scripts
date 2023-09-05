@@ -25,6 +25,10 @@ BEGIN
     fetch cur into id, prc, dis;
     set fprc := prc * (1 - dis / 100);
 
+    if (fprc < 800) then 
+      set fprc := 800;
+    end if;
+
     update customer set pad = fprc
     where cid = id;
 
