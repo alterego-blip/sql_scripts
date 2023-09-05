@@ -48,3 +48,10 @@ END //
 Delimiter ;
 
 call calc();
+
+select studentName, finalMarks - totalMarks as `Grace Marks` from student_details 
+where finalMarks > 70 * 350 / 100;
+
+select * from student_details where year(doa) = 2022
+and category is not null;
+
